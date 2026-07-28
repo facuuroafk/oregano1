@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orégano: Propiedades, Usos y Cuidados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --green-deep: #1a3c2a;
+            --green-dark: #235c3b;
+            --green-mid: #2d7a4f;
+            --green-main: #3a8f5c;
+            --green-light: #5aab7a;
+            --green-pale: #a3d9b6;
+            --green-wash: #daf1e4;
+            --cream-warm: #fdf6ed;
+            --cream: #fefae0;
+            --beige: #f5ebe0;
+            --earth: #c49a6c;
+            --earth-light: #dbbc93;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --text-dark: #1a1a1a;
+            --text-medium: #3d3d3d;
+            --text-light: #6b6b6b;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 14px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 2px 8px rgba(35, 60, 40, 0.06), 0 8px 24px rgba(35, 60, 40, 0.04);
+            --shadow-card-hover: 0 6px 20px rgba(35, 60, 40, 0.12), 0 16px 40px rgba(35, 60, 40, 0.06);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-medium);
+            background-color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.6rem 0;
+            transition: all var(--transition-smooth);
+            background-color: transparent;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: var(--shadow-md);
+            padding: 0.35rem 0;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            transition: color var(--transition-smooth);
+        }
+
+        .navbar.scrolled .navbar-logo {
+            color: var(--green-deep);
+        }
+
+        .navbar-logo .logo-icon {
+            font-size: 1.6rem;
+            transition: transform var(--transition-bounce);
+        }
+
+        .navbar-logo:hover .logo-icon {
+            transform: rotate(-12deg) scale(1.1);
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            gap: 0.3rem;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            transition: all var(--transition-fast);
+            letter-spacing: 0.01em;
+            position: relative;
+        }
+
+        .navbar.scrolled .navbar-links a {
+            color: var(--text-medium);
+        }
+
+        .navbar-links a:hover {
+            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .navbar.scrolled .navbar-links a:hover {
+            color: var(--green-dark);
+            background-color: var(--green-wash);
+        }
+
+        .navbar-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .navbar-hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            border-radius: 4px;
+            background-color: var(--white);
+            transition: all var(--transition-fast);
+        }
+
+        .navbar.scrolled .navbar-hamburger span {
+            background-color: var(--green-deep);
+        }
+
+        .navbar-hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+
+        .navbar-hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .navbar-hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #1a2f1f;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(20, 40, 25, 0.55) 0%,
+                    rgba(20, 40, 25, 0.65) 30%,
+                    rgba(20, 40, 25, 0.75) 60%,
+                    rgba(15, 30, 18, 0.88) 100%);
+            z-index: 1;
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.25;
+            background-image:
+                radial-gradient(1px 1px at 15% 25%, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 35% 60%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1.5px 1.5px at 55% 20%, rgba(255, 255, 255, 0.55), transparent),
+                radial-gradient(1px 1px at 70% 45%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1.5px 1.5px at 80% 70%, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 25% 80%, rgba(255, 255, 255, 0.45), transparent),
+                radial-gradient(1px 1px at 60% 85%, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(1.5px 1.5px at 90% 35%, rgba(255, 255, 255, 0.55), transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 780px;
+            padding: 2rem;
+            animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.45rem 1.4rem;
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.6rem;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .hero-badge i {
+            margin-right: 0.4rem;
+            color: #c8e6c9;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 6vw, 3.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-title span {
+            color: #b7e4c7;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+            max-width: 580px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem 2.4rem;
+            background-color: var(--white);
+            color: var(--green-deep);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            letter-spacing: 0.02em;
+            transition: all var(--transition-bounce);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(58, 143, 92, 0.15), rgba(163, 217, 182, 0.25));
+            opacity: 0;
+            transition: opacity var(--transition-smooth);
+            border-radius: 50px;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+            color: var(--green-dark);
+        }
+
+        .hero-btn:hover::after {
+            opacity: 1;
+        }
+
+        .hero-btn i {
+            transition: transform var(--transition-bounce);
+            font-size: 0.9rem;
+        }
+
+        .hero-btn:hover i {
+            transform: translateY(4px);
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            animation: bounceDown 2s ease-in-out infinite;
+        }
+
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+            border-radius: 10px;
+        }
+
+        /* ========== SECTION STYLES ========== */
+        .section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        .section-inner {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--green-main);
+            background-color: var(--green-wash);
+            padding: 0.4rem 1.3rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ========== INTRO SECTION ========== */
+        .intro-section {
+            background-color: var(--white);
+            padding: 5rem 2rem;
+        }
+
+        .intro-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background-color: var(--cream-warm);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .intro-image {
+            height: 100%;
+            min-height: 380px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .intro-card:hover .intro-image img {
+            transform: scale(1.04);
+        }
+
+        .intro-text {
+            padding: 2.5rem 3rem 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .intro-text .section-label {
+            align-self: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .intro-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            line-height: 1.75;
+        }
+
+        .intro-highlights {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .intro-highlight {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--green-dark);
+            background-color: rgba(58, 143, 92, 0.07);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .intro-highlight i {
+            color: var(--green-main);
+            font-size: 0.85rem;
+        }
+
+        /* ========== PROPERTIES SECTION ========== */
+        .properties-section {
+            background-color: var(--gray-50);
+            position: relative;
+        }
+
+        .properties-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, var(--white), var(--gray-50));
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .property-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.6rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition-bounce);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .property-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-main), var(--green-light), var(--green-pale));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-smooth);
+            border-radius: 0 0 4px 4px;
+        }
+
+        .property-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .property-icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-wash), #e8f5e9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.3rem;
+            transition: all var(--transition-bounce);
+            font-size: 1.7rem;
+            color: var(--green-main);
+        }
+
+        .property-card:hover .property-icon-circle {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(58, 143, 92, 0.2);
+            color: var(--green-dark);
+        }
+
+        .property-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        .property-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ========== USES SECTION ========== */
+        .uses-section {
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .uses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .use-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition-bounce);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .use-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .use-card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .use-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .use-card:hover .use-card-image img {
+            transform: scale(1.06);
+        }
+
+        .use-card-image .use-icon-overlay {
+            position: absolute;
+            bottom: -18px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            font-size: 1.2rem;
+            color: var(--green-main);
+            z-index: 2;
+            transition: all var(--transition-bounce);
+        }
+
+        .use-card:hover .use-icon-overlay {
+            background: var(--green-main);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .use-card-body {
+            padding: 1.6rem 1.5rem 2rem;
+        }
+
+        .use-card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        .use-card-body p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.65;
+        }
+
+        /* ========== CARE SECTION ========== */
+        .care-section {
+            background-color: var(--gray-50);
+            position: relative;
+        }
+
+        .care-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, var(--white), var(--gray-50));
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .care-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition-bounce);
+            cursor: default;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+
+        .care-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .care-icon {
+            font-size: 2.2rem;
+            color: var(--earth);
+            margin-bottom: 1rem;
+            transition: all var(--transition-bounce);
+            display: inline-block;
+        }
+
+        .care-card:hover .care-icon {
+            transform: scale(1.15);
+            color: var(--earth-light);
+        }
+
+        .care-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .care-card p {
+            font-size: 0.93rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .care-card .care-divider {
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--earth), var(--earth-light));
+            border-radius: 10px;
+            margin: 1rem auto;
+            transition: width var(--transition-smooth);
+        }
+
+        .care-card:hover .care-divider {
+            width: 60px;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: var(--green-deep);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.02em;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .footer .footer-leaf {
+            display: inline-block;
+            animation: sway 3s ease-in-out infinite;
+            font-size: 1.4rem;
+        }
+
+        @keyframes sway {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+            30% {
+                transform: rotate(6deg);
+            }
+            70% {
+                transform: rotate(-6deg);
+            }
+        }
+
+        /* ========== REVEAL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .properties-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.3rem;
+            }
+            .care-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.3rem;
+            }
+            .uses-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.3rem;
+            }
+            .intro-card {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .intro-text {
+                padding: 2rem 2rem 2rem 0.5rem;
+            }
+            .intro-text h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 340px;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.2rem;
+                padding: 2rem;
+                transition: right var(--transition-smooth);
+                box-shadow: -4px 0 30px rgba(0, 0, 0, 0.12);
+                z-index: 1000;
+            }
+
+            .navbar-links.active {
+                right: 0;
+            }
+
+            .navbar-links a {
+                color: var(--text-medium) !important;
+                font-size: 1.1rem;
+                padding: 0.7rem 1.4rem;
+            }
+
+            .navbar-links a:hover {
+                background-color: var(--green-wash) !important;
+                color: var(--green-dark) !important;
+            }
+
+            .navbar-hamburger {
+                display: flex;
+            }
+
+            .properties-grid,
+            .care-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .uses-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 440px;
+                margin: 0 auto;
+            }
+
+            .intro-card {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .intro-image {
+                min-height: 260px;
+                max-height: 320px;
+            }
+
+            .intro-text {
+                padding: 2rem 2rem 2.5rem;
+            }
+
+            .intro-text h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero-title {
+                font-size: clamp(1.9rem, 8vw, 2.6rem);
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3.5rem 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .navbar-container {
+                padding: 0 1.2rem;
+            }
+
+            .hero-scroll-indicator {
+                bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .intro-text {
+                padding: 1.5rem 1.3rem 2rem;
+            }
+            .intro-text h2 {
+                font-size: 1.4rem;
+            }
+            .intro-text p {
+                font-size: 0.95rem;
+            }
+            .intro-highlights {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .property-card,
+            .care-card {
+                padding: 1.5rem 1.2rem;
+            }
+            .property-icon-circle {
+                width: 58px;
+                height: 58px;
+                font-size: 1.4rem;
+            }
+            .hero-btn {
+                padding: 0.75rem 1.8rem;
+                font-size: 0.9rem;
+            }
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <span class="logo-icon">🌿</span> Orégano
+            </a>
+            <ul class="navbar-links" id="navLinks">
+                <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#propiedades" onclick="closeMenu()">Propiedades</a></li>
+                <li><a href="#usos" onclick="closeMenu()">Usos</a></li>
+                <li><a href="#cuidados" onclick="closeMenu()">Cuidados</a></li>
+            </ul>
+            <button class="navbar-hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <img
+            src="https://images.unsplash.com/photo-1600846885566-55b0f8a69a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+            alt="Planta de orégano fresco"
+            loading="eager"
+            >
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-leaf"></i> Hierba medicinal
+            </div>
+            <h1 class="hero-title">Orégano: <span>Propiedades, Usos y Cuidados</span></h1>
+            <p class="hero-subtitle">
+                Descubre todo sobre esta maravillosa hierba aromática: sus beneficios para la salud,
+                sus múltiples aplicaciones y los secretos para cultivarla con éxito.
+            </p>
+            <a href="#introduccion" class="hero-btn">
+                Explorar <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Deslizar</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section" id="introduccion">
+        <div class="section-inner">
+            <div class="intro-card reveal">
+                <div class="intro-image">
+                    <img
+                    src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Orégano fresco en primer plano"
+                    loading="lazy"
+                    >
+                </div>
+                <div class="intro-text">
+                    <span class="section-label"><i class="fa-solid fa-seedling"></i> Introducción</span>
+                    <h2>Una hierba milenaria llena de poder</h2>
+                    <p>
+                        El orégano es una hierba aromática con gran poder antioxidante, antimicrobiano y digestivo. Se usa en la cocina como condimento y en infusiones o aceites para aliviar resfriados, dolores y problemas estomacales. Necesita poco agua y sol directo; un exceso de humedad puede pudrir sus raíces.
+                    </p>
+                    <div class="intro-highlights">
+                        <span class="intro-highlight"><i class="fa-solid fa-shield-haltered"></i> Antioxidante</span>
+                        <span class="intro-highlight"><i class="fa-solid fa-droplet"></i> Poco riego</span>
+                        <span class="intro-highlight"><i class="fa-solid fa-sun"></i> Sol directo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTIES SECTION -->
+    <section class="section properties-section" id="propiedades">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-label"><i class="fa-solid fa-heart-pulse"></i> Beneficios</span>
+                <h2 class="section-title">Propiedades principales</h2>
+                <p class="section-subtitle">Cada una de estas propiedades hace del orégano una planta imprescindible en el hogar.</p>
+            </div>
+            <div class="properties-grid">
+                <div class="property-card reveal reveal-delay-1">
+                    <div class="property-icon-circle">
+                        <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <h3>Antioxidante</h3>
+                    <p>Cuida las células y frena el daño oxidativo.</p>
+                </div>
+                <div class="property-card reveal reveal-delay-2">
+                    <div class="property-icon-circle">
+                        <i class="fa-solid fa-virus-slash"></i>
+                    </div>
+                    <h3>Antimicrobiano</h3>
+                    <p>Ayuda a combatir bacterias, virus y hongos.</p>
+                </div>
+                <div class="property-card reveal reveal-delay-3">
+                    <div class="property-icon-circle">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Antiinflamatorio</h3>
+                    <p>Alivia dolores musculares y articulares.</p>
+                </div>
+                <div class="property-card reveal reveal-delay-4">
+                    <div class="property-icon-circle">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>Digestivo</h3>
+                    <p>Mejora los gases y los dolores estomacales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USES SECTION -->
+    <section class="section uses-section" id="usos">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-label"><i class="fa-solid fa-utensils"></i> Aplicaciones</span>
+                <h2 class="section-title">Usos frecuentes</h2>
+                <p class="section-subtitle">Formas prácticas de incorporar el orégano en tu vida diaria.</p>
+            </div>
+            <div class="uses-grid">
+                <div class="use-card reveal reveal-delay-1">
+                    <div class="use-card-image">
+                        <img
+                        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Orégano en la cocina"
+                        loading="lazy"
+                        >
+                        <div class="use-icon-overlay">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="use-card-body">
+                        <h3>En la cocina</h3>
+                        <p>Hojas frescas o secas en salsas, carnes, guisos y pizzas.</p>
+                    </div>
+                </div>
+                <div class="use-card reveal reveal-delay-2">
+                    <div class="use-card-image">
+                        <img
+                        src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Infusión de orégano"
+                        loading="lazy"
+                        >
+                        <div class="use-icon-overlay">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                    </div>
+                    <div class="use-card-body">
+                        <h3>En infusión</h3>
+                        <p>Para calmar la tos, la gripe o los cólicos menstruales.</p>
+                    </div>
+                </div>
+                <div class="use-card reveal reveal-delay-3">
+                    <div class="use-card-image">
+                        <img
+                        src="https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Aceite de orégano"
+                        loading="lazy"
+                        >
+                        <div class="use-icon-overlay">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                    </div>
+                    <div class="use-card-body">
+                        <h3>En aceite</h3>
+                        <p>Aplicado de forma externa para tratar afecciones leves en la piel o uñas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARE SECTION -->
+    <section class="section care-section" id="cuidados">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <span class="section-label"><i class="fa-solid fa-spa"></i> Cultivo</span>
+                <h2 class="section-title">Cuidados y riego</h2>
+                <p class="section-subtitle">Consejos esenciales para mantener tu planta de orégano saludable y vigorosa.</p>
+            </div>
+            <div class="care-grid">
+                <div class="care-card reveal reveal-delay-1">
+                    <div class="care-icon"><i class="fa-solid fa-water"></i></div>
+                    <h3>Riego escaso</h3>
+                    <div class="care-divider"></div>
+                    <p>Deja secar la tierra por completo antes de volver a regar.</p>
+                </div>
+                <div class="care-card reveal reveal-delay-2">
+                    <div class="care-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+                    <h3>Evitar encharcos</h3>
+                    <div class="care-divider"></div>
+                    <p>El exceso de agua daña y pudre las raíces con facilidad.</p>
+                </div>
+                <div class="care-card reveal reveal-delay-3">
+                    <div class="care-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Luz solar</h3>
+                    <div class="care-divider"></div>
+                    <p>Pon la planta en un lugar con sol directo para que crezca fuerte y aromática.</p>
+                </div>
+                <div class="care-card reveal reveal-delay-4">
+                    <div class="care-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>Suelo</h3>
+                    <div class="care-divider"></div>
+                    <p>Usa tierra con buen drenaje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo"><span class="footer-leaf">🌿</span> Orégano</div>
+            <p>Naturaleza, salud y sabor en una sola planta. Cultívala, consúmela y disfruta de todos sus beneficios.</p>
+            <p style="margin-top:0.8rem;font-size:0.8rem;color:rgba(255,255,255,0.45);">
+                &copy; 2026 · Página informativa sobre orégano
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ========== NAVBAR SCROLL EFFECT ==========
+        const navbar = document.getElementById('navbar');
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        function updateNavbar() {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+        updateNavbar();
+
+        // ========== MOBILE MENU TOGGLE ==========
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        function closeMenu() {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !hamburgerBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // ========== SCROLL REVEAL ANIMATION ==========
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px',
+            }
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+
+        // ========== SMOOTH SCROLL FOR ALL ANCHOR LINKS ==========
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const navHeight = navbar.offsetHeight + 20;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset -
+                        navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+
+        // ========== PARALLAX-LIKE EFFECT ON HERO ==========
+        const heroBg = document.querySelector('.hero-bg img');
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    if (scrolled < window.innerHeight && heroBg) {
+                        const rate = scrolled * 0.35;
+                        heroBg.style.transform = `translateY(${rate}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>
